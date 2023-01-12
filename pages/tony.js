@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { AiOutlineSearch } from 'react-icons/ai'
 
 const style = {
-    wrapper: 'relative h-[2040vh]',
+    wrapper: 'relative h-[3100vh]',
     contentWrapper: 'flex h-screen relative justify-center flex-wrap items-center',
     copyContainer: 'w-1/2',
     title: 'relative text-black text-[40px] font-semibold',

@@ -19,10 +19,11 @@ const style = {
 }
 
 const NFTCard = ({listing}) => {
+    console.log(listing)
   return (
     <div className = {style.wrapper}>
       <div className = {style.imageContainer}>
-        <Image
+        <img
           className = {style.nftImage}
           src = {listing.imageUrl}
           height = {200}
@@ -34,13 +35,30 @@ const NFTCard = ({listing}) => {
       <div className = {style.nftLowerContainer}>
         <div className = {style.nftInfoContainer}>
           <div>
+            
+              <div className = {style.collectionTitle}>
+              </div>
+
             <div className = {style.nftTitle}>
-              {listing.name}
+              
             </div>
           </div>
+
+          <div className = {style.priceContainer}>
+            <div className = {style.priceTitle}>Buy at</div>
+            <div className = {style.wethImageContainer}>
+              <div className = {style.priceValue}>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className = {style.likesContainer}>
+          <div className = {style.likesCounter}>
           </div>
         </div>
       </div>
+    </div>
   )
 }
 

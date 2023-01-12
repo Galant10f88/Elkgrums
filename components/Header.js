@@ -33,7 +33,7 @@ const Header = () => {
                 <Link href="../../requirements">
                     <div className={style.headerBut}> Requirements </div>
                 </Link>
-                <Link href="../../testpage">
+                <Link href="../../newTest">
                     <div className={style.cheating}> . </div>
                 </Link>
             </div>

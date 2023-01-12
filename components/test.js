@@ -1,43 +1,41 @@
 import { useEffect, useState } from 'react'
+import React from 'react';
 import Link from 'next/link'
-import NFTCard from '../components/testCard'
+import DisnCard from '../components/testCard'
+import axios from 'axios'
 
 const style = {
   wrapper: `mx-auto grid max-w-fit flex-1 grid-cols-1 gap-8 p-10 pt-24 md:grid-cols-2 md:pt-0 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5`,
   loading: `text-white text-2xl`
 }
 
+
+
 const Listings = () => {
-    /*
-  const marketplace = useMarketplace("0x8F449a9ea0F414140C7c06Af4A63BD1FB2DAE2Da")
-  const {data: listings, isLoading: loadingListings} = useActiveListings(marketplace)
 
-  useEffect(()=> {
-    getListings()
-  }, [])
-  
-  const getListings = async () => {
-    try {
-      const list = await marketplace.getActiveListings()
+  const [posts, setPosts] = React.useState([]);
 
-      setListings(list)
-    } catch (error) {
-      console.log(error)
-    }
-  }
-  */
+  const getData = async () => {
+    const response = await axios.get(
+      'https://api.disneyapi.dev/characters'
+    );
+    console.log(response.data.results);
+    setPosts(response.data.results);
+  };
 
-  const characters = 'https://api.disneyapi.dev/characters';
-
-  const data = Array.from(characters);
+  console.log(posts)
 
   return (
     <div className = {style.wrapper}>
         <>
-        {data?.map((listing) => (
+        {posts && posts.map && posts?.map((listing) => (
+          <div
+          key = {listing.name}
+        >
           <a>
-             <NFTCard listing = {listing}/>
+             <DisnCard listing = {listing}/>
           </a>
+          </div>
         ))}
       </>
     </div>
@@ -45,3 +43,25 @@ const Listings = () => {
 }
 
 export default Listings
+
+/*
+
+const client = axios.create({
+  baseURL: "https://api.disneyapi.dev/characters" 
+});
+
+const [posts, setPosts] = useState([]);
+
+   useEffect(() => {
+      client.get('?_limit=10').then((response) => {
+         setPosts(response.data);
+      });
+   }, []);
+
+  //const characters = 'https://api.disneyapi.dev/characters';
+
+  const data = Array.from(posts);
+
+  console.log(posts)
+
+  */
