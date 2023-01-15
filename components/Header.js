@@ -11,7 +11,7 @@ const style = {
     logoText: 'ml-[0.8rem] text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white font-semibold text-4xl',
     headerItems: 'flex items-center justify-end',
     headerBut: 'text-xl text-blue-700 px-2 font-bold hover:text-orange-500 border border-transparent bg hover:bg-transparent transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 ... cursor-pointer',
-    cheating: 'text-transparent px-4 font-bold',
+    hidden: 'text-transparent px-4 font-bold',
 }
 
 
@@ -28,13 +28,13 @@ const Header = () => {
                     <div className={style.headerBut}> Characters </div>
                 </Link>
                 <Link href="../../dev">
-                    <div className={style.cheating}> . </div>
+                    <div className={style.hidden}> . </div>
                 </Link>
                 <Link href="../../requirements">
                     <div className={style.headerBut}> Requirements </div>
                 </Link>
                 <Link href="../../newTest">
-                    <div className={style.cheating}> . </div>
+                    <div className={style.hidden}> . </div>
                 </Link>
             </div>
     </div>

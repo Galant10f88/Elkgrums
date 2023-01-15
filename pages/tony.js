@@ -21,6 +21,7 @@ const style = {
 //<div style={{ display: "flex", flexDirection: "row", maxWidth: "100%", gap: 30, flexWrap: "wrap" }}>
 //<div className="card" style={{ width: "18rem"}} key={`character-${character.name}-${index}`}>
 //<div className="card-body">
+//sort( (a,b) => a.name > b.name ? 1 : -1 )
 
 const Cards = () => {
     const [characters, setCharacters] = useState([]);
@@ -37,6 +38,17 @@ const Cards = () => {
         setCharacters(jsonObj.data);
     }
 
+    //const sorted = characters;
+    //sorted.sort( (a,b) => a.name > b.name ? 1 : -1 );
+
+        function handleClick() {
+            const sortedCharacters = [...characters];
+            sortedCharacters.sort( (a,b) => a.name > b.name ? 1 : -1 );
+            // Re-render with the new array
+            setCharacters(sortedCharacters);
+            console.log(sortedCharacters);
+          }
+
     return (
         <div className={style.wrapper}>
             <div className={style.contentWrapper}>
@@ -51,9 +63,9 @@ const Cards = () => {
             <input className={style.searchInput} 
             placeholder="Search Characters!"
             />
-        </div>
-                    <button className={style.button}> Sort button </button>
-                    <div className={style.grid}>
+                </div>
+                <button className={style.button} onClick={handleClick}> Sort Button</button>
+                    <div className={style.grid}> 
                         {characters.map((character, index) => {
                             return (
                                 <div className={style.carWrap}>
@@ -64,7 +76,7 @@ const Cards = () => {
                                         <p className="card-text">Char ID - {character._id}</p>
                                     </div>
                                 </div>
-                                </div>
+                            </div>
                             )
                         })}
                     </div>
