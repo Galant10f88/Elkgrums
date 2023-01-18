@@ -48,6 +48,14 @@ const Cards = () => {
             console.log(sortedCharacters);
           }
 
+        function handleSearch() {
+            const sortedCharacters = [...characters];
+            sortedCharacters.sort( (a,b) => a.name > b.name ? 1 : -1 );
+            // Re-render with the new array
+            setCharacters(sortedCharacters);
+            console.log(sortedCharacters);
+          }
+
     return (
         <div className={style.wrapper}>
             <div className={style.contentWrapper}>

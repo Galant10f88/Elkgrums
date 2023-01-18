@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Disney</title>
-        <link rel="icon" href="/mick.png" />
+        <link rel="icon" href="/blueMick.png" />
       </Head>
       <Header />
       <Component {...pageProps} />
