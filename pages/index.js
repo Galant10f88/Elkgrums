@@ -5,7 +5,7 @@ import Image from 'next/image'
 //min-h-screen
 
 const style = {
-  container: 'before:content-[""] before:bg-black before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-[url("https://disneyconnect.com/app/uploads/sites/4/2022/06/0901ZQ_0332MS_JRoh-scaled.jpg")] before:bg-cover before:bg:-center before:opacity-40 before:blur',
+  container: 'before:content-[""] before:bg-black before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-[url("https://www.timeforkids.com/wp-content/uploads/2019/09/final-cover-forest.jpg")] before:bg-cover before:bg:-center before:opacity-60 before:blur',
   contentWrapper: 'flex h-screen relative justify-center flex-wrap items-center',
 }
 
@@ -17,29 +17,29 @@ const Home = () => {
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
         <h1 className="text-6xl font-bold">
           Welcome to{' '}
-          <a className="text-blue-600" href="https://area15.com/">
-            Disney15!
+          <a className="text-green-600" href="https://area15.com/">
+            ElkGrums Coffee!
           </a>
         </h1>
 
         <p className="mt-3 text-2xl">
-          Visit the characters page to find all your favorite Disney Characters!
+          Best coffee on this side of the Mississippi.
         </p>
 
         <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
           <a
-            href="../../characters"
-            className="mt-6 w-96 rounded-xl border border-yellow-600 p-6 text-left hover:text-blue-600 focus:text-blue-600"
+            href="https://www.fake-coffee.com/"
+            className="mt-6 w-96 rounded-xl border border-green-600 p-6 text-left hover:text-blue-600 focus:text-blue-600"
           >
-            <h3 className="text-2xl font-bold">Disney Characters &rarr;</h3>
+            <h3 className="text-2xl font-bold">Order Coffee &rarr;</h3>
             <p className="mt-4 text-xl">
-              Find all your favorite characters from the Disney franchise.
+              This is the best place to buy coffee if you don't hate dogs.
             </p>
           </a>
 
           <a
             href="../../requirements"
-            className="mt-6 w-96 rounded-xl border border-yellow-600 p-6 text-left hover:text-blue-600 focus:text-blue-600"
+            className="mt-6 w-96 rounded-xl border border-green-600 p-6 text-left hover:text-blue-600 focus:text-blue-600"
           >
             <h3 className="text-2xl font-bold">Requirements &rarr;</h3>
             <p className="mt-4 text-xl">
@@ -48,22 +48,22 @@ const Home = () => {
           </a>
 
           <a
-            href="https://www.area15.com/"
-            className="mt-6 w-96 rounded-xl border border-yellow-600 p-6 text-left hover:text-blue-600 focus:text-blue-600"
+            href="https://702pros.com/"
+            className="mt-6 w-96 rounded-xl border border-green-600 p-6 text-left hover:text-blue-600 focus:text-blue-600"
           >
-            <h3 className="text-2xl font-bold">Visit Area15 &rarr;</h3>
+            <h3 className="text-2xl font-bold">702 Pros &rarr;</h3>
             <p className="mt-4 text-xl">
-              Discover and enjoy the most interesting place in Las Vegas.
+              Discover the best place in the 702 for websites.
             </p>
           </a>
 
           <a
-            href="https://www.disney.com/"
-            className="mt-6 w-96 rounded-xl border border-yellow-600 p-6 text-left hover:text-blue-600 focus:text-blue-600"
+            href="https://www.twofolio.com/"
+            className="mt-6 w-96 rounded-xl border border-green-600 p-6 text-left hover:text-blue-600 focus:text-blue-600"
           >
-            <h3 className="text-2xl font-bold">Visit Disney &rarr;</h3>
+            <h3 className="text-2xl font-bold">TwoFolio &rarr;</h3>
             <p className="mt-4 text-xl">
-              Click here to visit the most magical place on Earth!
+               TwoFolio for Powerful Property Manager Software Solutions!
             </p>
           </a>
         </div>
